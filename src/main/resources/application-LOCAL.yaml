@@ -1,0 +1,26 @@
+#kafka config
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: client-fields-consumer
+      auto-offset-reset: earliest
+      key-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.crm.clientfieldsconsumer.dto
+            value:
+              default:
+                type: com.crm.clientfieldsconsumer.dto.ClientFieldDTO
+
+#management config
+management:
+  server:
+    port: 20000
+
+#server config
+server:
+  port: 20000
