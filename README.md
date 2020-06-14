@@ -1,2 +1,5 @@
-# fields-consumer
-Consumer of events about client fields
+## BUILD JAR
+./gradlew build
+
+## BUILD DOCKER IMAGE
+docker build --build-arg JAR_FILE=build/libs/*.jar -f docker/Dockerfile  -t alsvinicius/clients-fields-consumer .
