@@ -1,5 +1,10 @@
 #kafka config
 spring:
+  data:
+    mongodb:
+      host: 192.168.200.20
+      port: 27017
+      database: fields
   kafka:
     consumer:
       bootstrap-servers: 192.168.200.30:9092
